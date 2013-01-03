@@ -10,7 +10,7 @@ from lxml import etree
 from jinja2 import Environment, FileSystemLoader
 current_dir = os.path.dirname(os.path.abspath(__file__))
 env = Environment(loader=FileSystemLoader(current_dir + '/templates'))
-
+OPENDATA_KEY = 'YOUR KEY HERE'
 
 class Root:
     @cherrypy.expose
@@ -84,7 +84,7 @@ class Root:
         return self.data_vcub
 
     def vcub(self):
-        request = urllib2.Request('http://data.lacub.fr/wfs?key=ULV4CR2TSD&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=CI_VCUB_P&SRSNAME=EPSG:3945', headers={'Accept': 'application/xml'})
+        request = urllib2.Request('http://data.lacub.fr/wfs?key=' + OPENDATA_KEY + '&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=CI_VCUB_P&SRSNAME=EPSG:3945', headers={'Accept': 'application/xml'})
         xml = etree.parse(urllib2.urlopen(request))
         stations = {}
         for station in xml.getroot().iter('{http://www.opengis.net/gml}featureMember'):
