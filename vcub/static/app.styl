@@ -1,0 +1,146 @@
+//https://kuler.adobe.com/#themeID/2175342
+color_1 = #3B3140
+color_2 = #BFB8A3
+color_3 = #F2E0C9
+color_4 = #F2B9AC
+color_5 = #D97E7E
+font = 'Open Sans', sans-serif
+shadow_1 = 0 0px 4px rgba(0, 0, 0, 0.1)
+color_red = #FF0000
+color_orange = #FF7E00
+color_green = #00FF1B
+html, body
+    background-color color_3
+    color color_1
+
+html, body, h1, h2, h3, h4, h5, h6
+    font-family font
+
+header
+    background color_1
+    border-bottom 2px solid color_4
+    box-shadow 0 1px 4px rgba(0, 0, 0, 0.1)
+    margin-bottom 20px
+    h1.brand
+        color color_3
+        font-family font
+        font-weight 700
+        font-style normal
+        font-size 20px
+        text-shadow shadow_1
+
+    div.updated
+        margin-top 15px
+
+    p.updated
+        color color_3
+        font-family font
+        text-shadow shadow_1
+        text-align right
+
+div#content .row
+    width 100%
+
+div#catchphrase
+    h2
+        text-align center
+        color color_5
+        font-family font        
+        text-shadow shadow_1
+        font-weight 400
+
+div.metric
+    text-align center
+    text-shadow shadow_1
+
+    span.value
+        vertical-align middle
+        font-size 4em
+        font-weight bold
+
+    span.legend
+        font-size 2em
+        font-weight 300
+        vertical-align middle
+
+div#map
+    margin-top 20px
+    height 400px
+    box-shadow 0 0 5px rgba(0, 0, 0, 0.8)
+
+//https://kuler.adobe.com/#themeID/17965
+.leaflet-div-icon
+    width 20px
+    height 20px
+    border-radius 10px
+    box-shadow 0 0px 5px rgba(0, 0, 0, 0.2)
+    opacity 0.8
+    border 5px solid
+
+    &.offline
+        background-color lightGrey
+        opacity 1
+        border-color lightGrey
+
+    &.velos_red
+        background-color color_red
+
+    &.velos_orange
+        background-color color_orange
+
+    &.velos_green
+        background-color color_green
+
+    &.places_red
+        border-color color_red
+
+    &.places_orange
+        border-color color_orange
+
+    &.places_green
+        border-color color_green
+
+
+.leaflet-popup-content-wrapper
+    border-radius 0px
+    background-color white
+    border 1px solid #CCC
+    border 1px solid rgba(0, 0, 0, 0.2)
+    -webkit-box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
+    -moz-box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
+    box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
+
+.leaflet-popup-content ul li
+    list-style none
+
+.leaflet-popup-tip-container
+    margin-top -1px
+
+div#list
+    background-color color_4
+    margin-top 20px
+    margin-bottom 20px
+    height 400px
+    padding 10px
+    box-shadow 0 0 5px rgba(0, 0, 0, 0.8)
+
+    div#stations_list
+        box-shadow 0 0 5px 0_1_black
+        height 88%
+        overflow-y auto
+        div.station
+            background-color whiteSmoke
+            padding 5px 10px 5px 10px
+            border-bottom 1px solid rgba(0, 0, 0, 0.2)
+            ul li
+                font-weight 400
+                display inline
+
+footer
+    margin-top 10px
+    background color_1
+    color color_3
+    font-family font
+    text-shadow shadow_1
+    text-align right
+    padding 10px

@@ -1,0 +1,13 @@
+{{#each stations}}
+<div class="station" data-name="{{lowercase this.data.NOM}}">
+    <h5><a href="#" class="station" data-lat="{{this.coordinates.[0]}}" data-lng="{{this.coordinates.[1]}}" data-gid="{{this.data.GID}}">{{this.data.NOM}}</a></h5>
+    {{#if this.data.nbvelos}}
+        <ul>
+            <li><b>V&eacute;los : </b>{{this.data.nbvelos}}</li>
+            <li><b>Places : </b>{{this.data.nbplaces}}</li>
+        </ul>
+    {{else}}
+        Station hors ligne
+    {{/if}}
+</div>
+{{/each}}
